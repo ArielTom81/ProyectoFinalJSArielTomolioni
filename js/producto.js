@@ -67,20 +67,7 @@ if(remerasEnCarrito.length != 0) {
 botonVaciar.addEventListener("click", vaciarCarrito);
 
 function vaciarCarrito() {
-    remerasEnCarrito.length = 0;
-    localStorage.setItem("carrito", JSON.stringify(remerasEnCarrito));
-    carritoVaciar.classList.remove("disabled"); 
-    carritoProductos.classList.add("disabled");
-    carritoAcciones.classList.add("disabled");
-    carritoComprado.classList.add("disabled"); 
 
-  /*   Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Carrito Vaciado",
-        showConfirmButton: false,
-        timer: 2000
-      }); */
       Swal.fire({
         title: "¿Está usted seguro?",
         text: "¡Está por vaciar su carrito!",
@@ -91,14 +78,23 @@ function vaciarCarrito() {
         confirmButtonText: "Si, vaciar!"
       }).then((result) => {
         if (result.isConfirmed) {
-          Swal.fire({
-            title: "Deleted!",
-            text: "Your file has been deleted.",
-            icon: "success"
-          });
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Carrito Vaciado",
+                showConfirmButton: false,
+                timer: 2000
+              });
+              remerasEnCarrito.length = 0;
+              localStorage.setItem("carrito", JSON.stringify(remerasEnCarrito));
+              carritoVaciar.classList.remove("disabled"); 
+              carritoProductos.classList.add("disabled");
+              carritoAcciones.classList.add("disabled");
+              carritoComprado.classList.add("disabled"); 
+
         }
       });
-    
+
 }
 
 botonComprar.addEventListener("click", comprarCarrito);
