@@ -1,31 +1,15 @@
 // Acá está la clase Productos
 
-class Remeras {
-    constructor(id, nombre, imagen, precio) {
-        this.id = id;
-        this.nombre =  nombre;
-        this.imagen = imagen;
-        this.precio = precio;
-    }
-}
+let productos = [];
 
-// Productos
-const remera01 = new Remeras("remera01", "Vue.JS", "./img/1.jpg", 6000);
-const remera02 = new Remeras("remera02", "Angular.JS", "./img/2.jpg", 6000);
-const remera03 = new Remeras("remera03", "React.JS", "./img/3.jpg", 5000);
-const remera04 = new Remeras("remera04", "Redux.JS", "./img/4.jpg", 5000);
-const remera05 = new Remeras("remera05", "Node.JS", "./img/5.jpg", 5000);
-const remera06 = new Remeras("remera06", "SASS", "./img/6.jpg", 5000);
-const remera07 = new Remeras("remera07", "HTML5", "./img/7.jpg", 5000);
-const remera08 = new Remeras("remera08", "Git Hub", "./img/8.jpg", 5000);
-const remera09 = new Remeras("remera09", "Bulma.CSS", "./img/9.jpg", 5000);
-const remera10 = new Remeras("remera10", "TypeScript", "./img/10.jpg", 5000);
-const remera11 = new Remeras("remera11", "Drupal", "./img/11.jpg", 5000);
-const remera12 = new Remeras("remera12", "JavaScript", "./img/12.jpg", 5000);
-const remera13 = new Remeras("remera13", "GraphQL", "./img/13.jpg", 5000);
-const remera14 = new Remeras("remera14", "Word Press", "./img/14.jpg", 5000);
-
-const productos = [remera01, remera02, remera03, remera04, remera05, remera06, remera07, remera08, remera09, remera10,remera11, remera12, remera13, remera14];
+fetch('./js/remeras.json')
+    .then( (response) => {
+        return response.json();
+    })
+    .then(data => {
+        productos = data;
+        renderizarProducto(productos);
+    })
 
 const contenedorProductos = document.querySelector("#grid");
 const imagenCamisas = document.querySelector("#grafico-camisas");
@@ -140,7 +124,7 @@ function renderizarProducto(productos) {
 
 }
 
-renderizarProducto(productos);
+
 
 
 function cargarImagenes() {

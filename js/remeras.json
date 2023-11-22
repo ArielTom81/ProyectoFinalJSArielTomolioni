@@ -1,0 +1,87 @@
+[
+    {
+        "id" : "remera01",
+        "nombre" :  "Vue.JS",
+        "imagen" : "./img/1.jpg",
+        "precio" : 6000
+    },
+    {
+        "id" : "remera02",
+        "nombre" :  "Angular.JS",
+        "imagen" : "./img/2.jpg",
+        "precio" : 6000
+    },
+    {
+        "id" : "remera03",
+        "nombre" :  "React.JS",
+        "imagen" : "./img/3.jpg",
+        "precio" : 5000
+    },
+    {
+        "id" : "remera04",
+        "nombre" :  "Redux.JS",
+        "imagen" : "./img/4.jpg",
+        "precio" : 5000
+    },
+    {
+        "id" : "remera05",
+        "nombre" :  "Node.JS",
+        "imagen" : "./img/5.jpg",
+        "precio" : 5000
+    },
+    {
+        "id" : "remera06",
+        "nombre" :  "SASS",
+        "imagen" : "./img/6.jpg",
+        "precio" : 5000
+    },
+    {
+        "id" : "remera07",
+        "nombre" :  "HTML5",
+        "imagen" : "./img/7.jpg",
+        "precio" : 5500
+    },
+    {
+        "id" : "remera08",
+        "nombre" :  "Git Hub",
+        "imagen" : "./img/8.jpg",
+        "precio" : 6500
+    },
+    {
+        "id" : "remera09",
+        "nombre" :  "Bulma.CSS",
+        "imagen" : "./img/9.jpg",
+        "precio" : 6000
+    },
+    {
+        "id" : "remera10",
+        "nombre" :  "TypeScript",
+        "imagen" : "./img/10.jpg",
+        "precio" : 4000
+    },
+    {
+        "id" : "remera11",
+        "nombre" :  "Drupal",
+        "imagen" : "./img/11.jpg",
+        "precio" : 4500
+    },
+    {
+        "id" : "remera12",
+        "nombre" :  "JavaScript",
+        "imagen" : "./img/12.jpg",
+        "precio" : 7000
+    },
+    {
+        "id" : "remera13",
+        "nombre" :  "GraphQL",
+        "imagen" : "./img/13.jpg",
+        "precio" : 5000
+    },
+    {
+        "id" : "remera14",
+        "nombre" :  "Word Press",
+        "imagen" : "./img/14.jpg",
+        "precio" : 5000
+    }
+]
+
