@@ -113,7 +113,7 @@ function renderizarProducto(productos) {
                 Toastify({
                     text: "Remera agregada al carrito",
                     duration: 2000,
-                    destination: "http://127.0.0.1:5500/producto.html",
+                    destination: "https://arieltom81.github.io/ProyectoFinalJSArielTomolioni/producto.html",
                     newWindow: false,
                     close: true,
                     gravity: "top", // `top` or `bottom`
