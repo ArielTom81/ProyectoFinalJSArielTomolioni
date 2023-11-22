@@ -74,12 +74,29 @@ function vaciarCarrito() {
     carritoAcciones.classList.add("disabled");
     carritoComprado.classList.add("disabled"); 
 
-    Swal.fire({
+  /*   Swal.fire({
         position: "top-end",
         icon: "success",
         title: "Carrito Vaciado",
         showConfirmButton: false,
         timer: 2000
+      }); */
+      Swal.fire({
+        title: "¿Está usted seguro?",
+        text: "¡Está por vaciar su carrito!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, vaciar!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success"
+          });
+        }
       });
     
 }
