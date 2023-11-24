@@ -9,18 +9,12 @@ let totalCarrito = document.querySelector("#precioTotal");
 let remerasEnCarrito = JSON.parse(localStorage.getItem("carrito"));
 sumarTotalCarrito();
 
-
-
-console.log(carritoProductos);
-
 if(remerasEnCarrito.length != 0) {
-
 
     carritoVaciar.classList.add("disabled"); 
     carritoProductos.classList.remove("disabled");
     carritoAcciones.classList.remove("disabled");
     carritoComprado.classList.add("disabled"); 
-
 
     remerasEnCarrito.forEach(producto => {
         const divPadre = document.createElement("div");
@@ -51,7 +45,6 @@ if(remerasEnCarrito.length != 0) {
         grid.append(divPadre);
 
     });
- 
 
 } else {
 
@@ -60,9 +53,6 @@ if(remerasEnCarrito.length != 0) {
     carritoAcciones.classList.add("disabled");
     carritoComprado.classList.add("disabled"); 
 }
-
-
-
 
 botonVaciar.addEventListener("click", vaciarCarrito);
 
@@ -91,7 +81,6 @@ function vaciarCarrito() {
               carritoProductos.classList.add("disabled");
               carritoAcciones.classList.add("disabled");
               carritoComprado.classList.add("disabled"); 
-
         }
       });
 
@@ -115,7 +104,6 @@ function comprarCarrito() {
         timer: 2000
       });
 }
-
 
 function sumarTotalCarrito() {
     const sumaTotal = remerasEnCarrito.reduce((acc, producto) => (acc + producto.precio * producto.cantidad), 0);

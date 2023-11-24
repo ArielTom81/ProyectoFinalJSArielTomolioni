@@ -44,10 +44,8 @@ function agregarRemerasALS(producto, cantidad) {
         }
 
         localStorage.setItem("carrito", JSON.stringify(carrito));
-    }
-    
+    }   
 }
-
 
 function renderizarProducto(productos) {
     const grid = document.querySelector("#grid");
@@ -111,21 +109,14 @@ function renderizarProducto(productos) {
                     onClick: function(){} // Callback after click
                   }).showToast();
             }
-
- 
         });
 
         divBotones.append(cantidad, boton);
         divProducto.append(productoNombre, productoPrecio, divBotones);
         divPadre.append(imagenRemera, divProducto);
         grid.append(divPadre);
-
     }
-
 }
-
-
-
 
 function cargarImagenes() {
     const div = document.createElement("div");
